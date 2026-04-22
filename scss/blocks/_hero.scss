@@ -1,0 +1,190 @@
+.hero {
+  padding: 80px 0 0;
+  margin: 0 0 80px;
+
+  @include vp-1023 {
+    padding: 50px 0 0;
+    margin: 0px 0px 50px;
+  }
+
+  @include vp-767 {
+    padding: 40px 0 0;
+    margin: 0px 0px 40px;
+  }
+
+  &__heading {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 80px;
+
+    @include vp-1023 {
+      margin: 0px 0px 50px;
+    }
+
+    @include vp-767 {
+      margin: 0px 0px 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 86px;
+    line-height: 90px;
+    letter-spacing: 0.02em;
+    font-weight: 200;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+
+    @media (max-width: 1385px) {
+      font-size: 60px;
+      line-height: 66px;
+    }
+
+    @include vp-1023 {
+      font-size: 44px;
+      line-height: 50px;
+      margin: 0px 0px 17px
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 36px;
+      margin: 0px 0px 12px
+    }
+  }
+
+  &__description {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 440px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 27px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    padding: 13px 0;
+
+    @media (max-width: 1385px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 20px;
+      gap: 12px;
+      padding: 6px 0;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__button-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__button-subtrack {
+    height: 64px;
+    width: 53px;
+
+    @media (max-width: 1120px) {
+      height: 40px;
+      width: 33px;
+    }
+
+    @include vp-1023 {
+      height: 40px;
+      width: 33px;
+    }
+  }
+
+  &__button-arrow {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 16px;
+
+    @media (max-width: 1120px) {
+      width: 15px;
+      height: 12.5px;
+    }
+
+    @include vp-1023 {
+      width: 15px;
+      height: 12.5px;
+    }
+  }
+
+  &__button:hover &__button-arrow {
+    left: 0;
+    left: 20%;
+  }
+
+  &__button:focus &__button-arrow {
+    left: 0;
+    left: 20%;
+  }
+
+  &__link-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 1510px) {
+      gap: 30px;
+    }
+
+    @include vp-1023 {
+      gap: 20px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 10px 20px;
+    border-bottom: 2px solid $color-black;
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+      color: $color-mischka;
+    }
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0px 10px 10px
+    }
+  }
+}
